@@ -1,1 +1,7 @@
-<p>{{text}}</p>
+<div class="row">
+  <div ng-repeat="mobile in mobiles">
+    <div class="col-lg-4">
+       <a ui-sref="mobile-view.view({mobileId: mobile.id})">{{mobile.brand}} {{mobile.model}}</a>
+    </div>
+  </div>
+</div>

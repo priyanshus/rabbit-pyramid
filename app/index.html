@@ -37,7 +37,7 @@
   <div class="store-container" ui-view></div>
   <legend>Suggestions</legend>
   <div ng-controller="SuggestionsListCtrl">
-  <div ng-include="'suggestions/suggestions.html'"></div>
+  <div ng-init="getMobileList()" ng-include="'suggestions/suggestions.html'"></div>
 </div>
 </div>
 

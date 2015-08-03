@@ -10,6 +10,7 @@ angular.module('myApp', [
   'myApp.mobileDetail',
   'myApp.payment',
   'myApp.suggestions',
+  'myApp.customerDetails',
   'myApp.version'
 ]).
 config(['$urlRouterProvider', function($urlRouterProvider) {

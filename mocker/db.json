@@ -4,73 +4,73 @@
       "id": 1,
       "brand": "Apple",
       "model": "iPhone 7",
-      "price": "$100"
+      "price": 100
     },
     {
       "id": 2,
       "brand": "Apple",
       "model": "iPhone 6",
-      "price": "$100"
+      "price": 100
     },
     {
       "id": 3,
       "brand": "Apple",
       "model": "iPhone 5",
-      "price": "$100"
+      "price": 100
     },
     {
       "id": 4,
       "brand": "Apple",
       "model": "iPhone 4",
-      "price": "$99"
+      "price": 99
     },
     {
       "id": 5,
       "brand": "HTC",
       "model": "One",
-      "price": "$99"
+      "price": 99
     },
     {
       "id": 6,
       "brand": "Samsung",
       "model": "S4",
-      "price": "$69"
+      "price": 69
     },
     {
       "id": 7,
       "brand": "Xiaomi",
       "model": "X1",
-      "price": "$98"
+      "price": 98
     },
     {
       "id": 8,
       "brand": "Micromax",
       "model": "M1",
-      "price": "$48"
+      "price": 48
     },
     {
       "id": 9,
       "brand": "Carbon",
       "model": "Carbo",
-      "price": "$18"
+      "price": 18
     },
     {
       "id": 10,
       "brand": "Xiaomi",
       "model": "X1",
-      "price": "$39"
+      "price": 39
     },
     {
       "id": 11,
       "brand": "Motorola",
       "model": "Mote G",
-      "price": "$69"
+      "price": 69
     },
     {
       "id": 12,
       "brand": "Motorola",
       "model": "Moto E",
-      "price": "$29"
+      "price": 29
     }
   ]
 }

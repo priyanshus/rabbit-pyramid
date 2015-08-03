@@ -8,12 +8,14 @@ module.exports = function(config){
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/bower_components/angular-ui-router/release/angular-ui-router.min.js',
-      'app/view*/**/*.js'
+      'app/mobile-store/*.js',
+      'app/mobile-store/specs/*-spec.js'
     ],
 
     autoWatch : true,
+    colors : true,
 
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine-jquery','jasmine'],
 
     browsers : ['Chrome'],
 
@@ -21,8 +23,12 @@ module.exports = function(config){
             'karma-chrome-launcher',
             'karma-firefox-launcher',
             'karma-jasmine',
-            'karma-junit-reporter'
+            'karma-jasmine-jquery',
+            'karma-junit-reporter',
+            'karma-spec-reporter'
             ],
+
+    reporters: ['spec'],
 
     junitReporter : {
       outputFile: 'test_out/unit.xml',

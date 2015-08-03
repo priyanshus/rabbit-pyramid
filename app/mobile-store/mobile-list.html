@@ -1,14 +1,20 @@
-<legend>Mobile Store</legend>
-<label>Phone only <input ng-model="search.$"></label><br>
 <div ng-init="getMobileList()">
+<legend>Mobile Store</legend>
 <div class="row">
-<div ng-repeat="mobile in mobiles | filter:search">
-  <div class="col-sm-6 col-md-3">
+  <div class="col-lg-6">
+      <input type="text" class="form-control" placeholder="Brand Search" ng-model="search.brand">
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-6">
+      <input type="text" class="form-control" placeholder="Model Search" ng-model="search.model">
+  </div>
+
+<div ng-repeat="mobile in mobiles | filter:search | orderBy:'-price'">
+  <div class="col-sm-6 col-md-3 margin-gap">
     <div class="thumbnail">
       <img src="http://americanmadness.com/wp-content/uploads/2008/04/apple.thumbnail.jpg" alt="logo">
       <div class="caption">
         <h3>{{mobile.brand}} {{mobile.model}}</h3>
-        <h4>{{mobile.price}}</h4>
+        <h4>$ {{mobile.price}}</h4>
         <a ui-sref="mobile-view.view({mobileId: mobile.id})" class="btn btn-primary" role="button">Buy</a>
       </div>
     </div>

@@ -23,5 +23,19 @@ angular.module('myApp.mobileDetail', ['ui.router'])
     $http.get('http://localhost:3000/mobiles/'+ $stateParams.mobileId)
     .success(function(response) {
       $scope.mobile = response;
-    });
-}]);
+    })
+
+    $scope.showOffer = function() {
+      $scope.offerText = '5% OFF on Rabbit Cards*';
+    }
+}])
+
+.directive('hideme', function() {
+  return function(scope, element, attrs) {
+    restrict: 'A';
+    var clickingCallback = function() {
+      element.addClass('hide');
+    };
+    element.bind('click', clickingCallback);
+  }
+});

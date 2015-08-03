@@ -6,9 +6,46 @@
   </div>
   <div class="media-body">
     <h3 name="productname" class="media-heading">{{mobile.brand}} {{mobile.model}}</h3>
-    <small>Subtext for header</small>
-    <h4 name="productprice">{{mobile.price}}</h4>
+    <small>{{mobile.brand}} {{mobile.model}} is the best phone</small>
+    <h4 name="productprice">$ {{mobile.price}}</h4>
     <a name="buylink" ui-sref="payment-gateway" class="btn btn-primary" role="button">Buy Now</a>
-    <a name="offerlink" ui-sref="check-offer" class="btn btn-primary" role="button">Offers Available</a>
+    <button name="offerlink" class="btn btn-primary" role="button" ng-click="showOffer()" hideme>Offer Available</button>
+    <div id='offer'>
+      <p><b>{{offerText}}<b></p>
+    </div>
   </div>
 </div>
+<div name="details">
+  <p class="small store-container">Whether you love watching videos or playing games,
+    the Galaxy J5 offers an immersive visual experience on its 12.7 cm (5) HD Super AMOLED display.
+    Enjoy sharp and detailed pictures in brilliant clarity and lifelike colors on this device.
+    The 64-bit 1.2 GHz Qualcomm Snapdragon Quad-Core processor and 1.5 GB RAM guarantee a lag-free performance. Apps open quickly, multitasking is smooth and games run without glitches.
+    It runs on Android Lollipop and comes with the Adreno 306 GPU.
+  </p>
+</div>
+<div name="specifications">
+<legend><h4>Features</h4></legend>
+<table class="table table-striped">
+  <tr>
+    <td>Brand</td>
+    <td>{{mobile.brand}}</td>
+  </tr>
+  <tr>
+    <td>Color</td>
+    <td>Black</td>
+  </tr>
+  <tr>
+    <td>Operating Frequency</td>
+    <td>GSM - 850, 900, 1800, 1900; WCDMA - 2100; 4G LTE - 2300</td>
+  </tr>
+  <tr>
+    <td>Processor</td>
+    <td>1.2 GHz + Qualcomm MSM8916, Quad Core</td>
+  </tr>
+  <tr>
+    <td>OS</td>
+    <td>Android v5.1 (Lollipop)</td>
+  </tr>
+</table>
+</div>
+<a name="buylink" ui-sref="payment-gateway" class="btn btn-primary" role="button">Buy Now</a>

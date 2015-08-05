@@ -13,6 +13,7 @@ angular.module('myApp.mobile-list', ['ui.router'])
 
 .controller('MobileListCtrl', function($scope, $http) {
   $scope.getMobileList = function() {
+    console.log('Calling API');
     $http.get('http://localhost:3000/mobiles')
     .success(function(response) {
        $scope.mobiles = response;

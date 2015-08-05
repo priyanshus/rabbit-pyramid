@@ -4,73 +4,121 @@
       "id": 1,
       "brand": "Apple",
       "model": "iPhone 7",
-      "price": 100
+      "logo": "http://img6a.flixcart.com/image/mobile/r/p/n/apple-a1387-125x125-imae6ykwrxrrnhfh.jpeg",
+      "price": 100,
+      "offerPrice": 99,
+      "available": true,
+      "briefDesc": "16 MP HD Camera"
     },
     {
       "id": 2,
       "brand": "Apple",
       "model": "iPhone 6",
-      "price": 100
+      "logo": "http://img6a.flixcart.com/image/mobile/r/p/n/apple-a1387-125x125-imae6ykwrxrrnhfh.jpeg",
+      "price": 100,
+      "offerPrice": 99,
+      "available": true,
+      "briefDesc": "Expandable upto 16 GB"
     },
     {
       "id": 3,
       "brand": "Apple",
       "model": "iPhone 5",
-      "price": 100
+      "logo": "http://img6a.flixcart.com/image/mobile/r/p/n/apple-a1387-125x125-imae6ykwrxrrnhfh.jpeg",
+      "price": 100,
+      "offerPrice": 99,
+      "available": true,
+      "briefDesc": "2 GB internal memory"
     },
     {
       "id": 4,
       "brand": "Apple",
       "model": "iPhone 4",
-      "price": 99
+      "logo": "http://img6a.flixcart.com/image/mobile/r/p/n/apple-a1387-125x125-imae6ykwrxrrnhfh.jpeg",
+      "price": 99,
+      "offerPrice": 89,
+      "available": true,
+      "briefDesc": "8 MP HD Camera"
     },
     {
       "id": 5,
       "brand": "HTC",
       "model": "One",
-      "price": 99
+      "logo": "http://img6a.flixcart.com/image/mobile/8/p/s/htc-one-e9-na-125x125-imae82qxphpyrfye.jpeg",
+      "price": 99,
+      "offerPrice": 69,
+      "available": true,
+      "briefDesc": "Expandable upto 32GB"
     },
     {
       "id": 6,
       "brand": "Samsung",
       "model": "S4",
-      "price": 69
+      "logo": "http://img6a.flixcart.com/image/mobile/3/u/9/samsung-galaxy-s3-neo-gt-i9300i-125x125-imaduzwtgkttvpjm.jpeg",
+      "price": 69,
+      "offerPrice": 59,
+      "available": true,
+      "briefDesc": "8 GB ROM + 32 GB Memory"
     },
     {
       "id": 7,
       "brand": "Xiaomi",
       "model": "X1",
-      "price": 98
+      "logo": "http://img5a.flixcart.com/image/mobile/b/v/y/mi-4i-mzb4343in-125x125-imae6zxfgr4xmme7.jpeg",
+      "price": 98,
+      "offerPrice": 69,
+      "available": true,
+      "briefDesc": "Expandable upto 32GB"
     },
     {
       "id": 8,
       "brand": "Micromax",
       "model": "M1",
-      "price": 48
+      "logo": "http://img6a.flixcart.com/image/mobile/g/f/y/micromax-unite-2-a106-8-gb-rom-125x125-imadxvuvrswyymzj.jpeg",
+      "price": 48,
+      "offerPrice": 39,
+      "available": true,
+      "briefDesc": "Light weight, slim"
     },
     {
       "id": 9,
       "brand": "Carbon",
       "model": "Carbo",
-      "price": 18
+      "logo": "http://img5a.flixcart.com/image/mobile/c/z/z/karbonn-android-one-sparkle-v-125x125-imaeyzadwbg3dzt8.jpeg",
+      "price": 18,
+      "offerPrice": 17,
+      "available": true,
+      "briefDesc": "Expandable upto 32GB"
     },
     {
       "id": 10,
       "brand": "Xiaomi",
-      "model": "X1",
-      "price": 39
+      "model": "X2",
+      "logo": "http://img5a.flixcart.com/image/mobile/b/v/y/mi-4i-mzb4343in-125x125-imae6zxfgr4xmme7.jpeg",
+      "price": 39,
+      "offerPrice": 34,
+      "available": false,
+      "briefDesc": "Expandable upto 32GB"
     },
     {
       "id": 11,
       "brand": "Motorola",
-      "model": "Mote G",
-      "price": 69
+      "model": "Moto G",
+      "logo": "http://img5a.flixcart.com/image/mobile/a/c/f/motorola-moto-e-2nd-gen-xt1521-125x125-imae5yvnugydbf9d.jpeg",
+      "price": 69,
+      "offerPrice": 45,
+      "available": true,
+      "briefDesc": "Low cost, long bettery life"
     },
     {
       "id": 12,
       "brand": "Motorola",
       "model": "Moto E",
-      "price": 29
+      "logo": "http://img5a.flixcart.com/image/mobile/a/c/f/motorola-moto-e-2nd-gen-xt1521-125x125-imae5yvnugydbf9d.jpeg",
+      "price": 29,
+      "offerPrice": 28,
+      "available": true,
+      "briefDesc": "Expandable upto 32GB"
     }
   ]
 }

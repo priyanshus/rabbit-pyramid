@@ -35,6 +35,14 @@
 }
 
 .margin-gap {
-    margin-bottom: 20px;
-    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.text-error {
+  color: #9F6000;
+}
+
+.btn-centered {
+  text-align: center;
+  display: block;
 }

@@ -3,7 +3,7 @@
 <div class="row">
   <div class="col-lg-6">
       <input type="text" class="form-control" placeholder="Brand Search" ng-model="search.brand">
-  </div><!-- /.col-lg-6 -->
+  </div>
   <div class="col-lg-6">
       <input type="text" class="form-control" placeholder="Model Search" ng-model="search.model">
   </div>
@@ -11,11 +11,17 @@
 <div ng-repeat="mobile in mobiles | filter:search | orderBy:'-price'">
   <div class="col-sm-6 col-md-3 margin-gap">
     <div class="thumbnail">
-      <img src="http://americanmadness.com/wp-content/uploads/2008/04/apple.thumbnail.jpg" alt="logo">
+      <a ui-sref="mobile-view.view({mobileId: mobile.id})">
+        <img src="{{mobile.logo}}" alt="logo">
+      </a>
       <div class="caption">
         <h3>{{mobile.brand}} {{mobile.model}}</h3>
-        <h4>$ {{mobile.price}}</h4>
-        <a ui-sref="mobile-view.view({mobileId: mobile.id})" class="btn btn-primary" role="button">Buy</a>
+        <p class="help-block">{{mobile.briefDesc}}</p>
+        <s class="text-error">Price: $ {{mobile.price}}</s>
+        <h4>Sale Price:<strong> $ {{mobile.offerPrice}} </strong></h4>
+        <strong>Free Delivery</strong><br>
+        <a ui-sref="mobile-view.view({mobileId: mobile.id})" ng-show="!{{mobile.available}}" ng-disabled="true" class="btn btn-primary" role="button">Out Of Stock</a>
+        <a ui-sref="mobile-view.view({mobileId: mobile.id})" ng-hide="!{{mobile.available}}" class="btn btn-primary" role="button">Buy</a>
       </div>
     </div>
   </div>

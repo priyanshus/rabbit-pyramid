@@ -18,14 +18,39 @@ angular.module('myApp.customerDetails', ['ui.router'])
     });
 })
 
-.controller('CustomerDetailsCtrl', function($scope,$location) {
+.controller('CustomerDetailsCtrl', function($scope, $location, LoginService) {
+
   $scope.doLogin = function() {
-    var username = $scope.username;
-    var password = $scope.password;
-    if(username == password) {
-      $location.path('/payment-gateway');
+    var isValidLogin = LoginService.validateLogin($scope.username, $scope.password);
+    if(isValidLogin) {
+      $location.path("/payment-gateway");
     }else {
-      $location.path('#');
+      $scope.erorrMessage = "Incorrect usrname/password";
+    }
+  };
+})
+
+.service('LoginService', function() {
+  this.validateLogin = function(uname, pword) {
+    if(uname=="admin" & pword =="admin") {
+      return true;
+    }else {
+      return false;
+    }
+  }
+})
+
+.directive('errordisplay', function() {
+  return {
+    require: 'ngModel',
+
+    link: function(scope, element, attr, ctrl) {
+      ctrl.$validators.errordisplay = function(modelValue, viewValue) {
+        if (ctrl.$isEmpty(modelValue) || viewValue.length <5) {
+          return false;
+        };
+        return true;
+      }
     }
   }
 });

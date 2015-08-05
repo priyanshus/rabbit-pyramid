@@ -38,4 +38,22 @@ angular.module('myApp.mobileDetail', ['ui.router'])
     };
     element.bind('click', clickingCallback);
   }
+})
+
+.directive('checkpincode', function() {
+  return {
+    require: 'ngModel',
+
+    link: function(scope, element, attr, ctrl) {
+      var avlblPinCodes = ['123','999','000'];
+      ctrl.$validators.checkpincode = function(modelValue, viewValue) {
+        var value = modelValue || viewValue;
+        if(avlblPinCodes.indexOf(value) == -1) {
+          return true;
+        }
+
+        return false;
+      }
+    }
+  };
 });

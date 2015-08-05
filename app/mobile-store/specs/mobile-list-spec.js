@@ -1,12 +1,14 @@
 'use strict';
-describe('myApp.mobile-list module', function() {
+describe('Mobile List View Module', function() {
   beforeEach(module('myApp.mobile-list'));
-  describe('MobileListCtrl controller', function(){
-    it('should be defined', inject(function($controller) {
+
+  describe('On Mobile List Page', function(){
+
+    it('should have defined controller', inject(function($controller) {
       var $scope = {};
-      var $http = {};
-      var MobileListCtrl = $controller('MobileListCtrl', { $scope: $scope }, {$http: $http});
-        expect(MobileListCtrl).toBeDefined();
+      var MobileListCtrl = $controller('MobileListCtrl', { $scope: $scope });
+
+      expect(MobileListCtrl).toBeDefined();
     }));
   });
 });

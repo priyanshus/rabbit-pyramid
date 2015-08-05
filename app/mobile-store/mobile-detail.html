@@ -1,18 +1,29 @@
 <div class="media">
   <div class="media-left media-middle">
-    <a href="#">
-      <img class="media-object" src="http://americanmadness.com/wp-content/uploads/2008/04/apple.thumbnail.jpg" alt="logo">
+    <a ui-sref="customer-details">
+      <img class="media-object" src={{mobile.logo}} alt="logo">
     </a>
   </div>
   <div class="media-body">
     <h3 name="productname" class="media-heading">{{mobile.brand}} {{mobile.model}}</h3>
-    <small>{{mobile.brand}} {{mobile.model}} is the best phone</small>
-    <h4 name="productprice">$ {{mobile.price}}</h4>
+    <p class="help-block">{{mobile.briefDesc}}</p>
+    <s class="text-error">Price: $ {{mobile.price}}</s>
+    <h4>Sale Price:<strong> $ {{mobile.offerPrice}} </strong></h4>
     <a name="buylink" ui-sref="customer-details" class="btn btn-primary" role="button">Buy Now</a>
     <button name="offerlink" class="btn btn-primary" role="button" ng-click="showOffer()" hideme>Offer Available</button>
     <div id='offer'>
       <p><b>{{offerText}}<b></p>
     </div>
+    <form name="form" novalidate>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="form-group form-group-sm">
+            <input type="text" class="form-control" name="pininput" ng-model="pincode" placeholder="Check Pin Code" checkpincode/>
+            <span id="errTxt" ng-show="form.pininput.$error.checkpincode" class="text-error">Available</span>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
 <div name="details">
@@ -48,4 +59,4 @@
   </tr>
 </table>
 </div>
-<a name="buylink" ui-sref="payment-gateway" class="btn btn-primary" role="button">Buy Now</a>
+<a name="buylink" ui-sref="payment-gateway" class="btn btn-primary" role="button">Buy Without Login</a>

@@ -15,7 +15,7 @@
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button class="btn btn-primary" ng-disabled="form.password.$error.errordisplay" role="button" type="submit">Sign In</button><br>
+          <button name='loginbutton' class="btn btn-primary" ng-disabled="form.password.$error.errordisplay" role="button" type="submit">Sign In</button><br>
           <span id="errTxt" ng-show="form.password.$error.errordisplay" class="text-error">Enter Credentials</span>
           <span id="errTxt" class="text-error">{{erorrMessage}}</span>
         </div>

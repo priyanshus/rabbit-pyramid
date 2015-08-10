@@ -1,5 +1,6 @@
 exports.config = {
   allScriptsTimeout: 11000,
+  directConnect: true,
 
   specs: [
     '*.js'
@@ -9,11 +10,13 @@ exports.config = {
     'browserName': 'chrome'
   },
 
-  baseUrl: 'http://localhost:8000/app/',
+  baseUrl: 'http://localhost:8000',
 
-  framework: 'jasmine',
+  framework: 'mocha',
 
-  jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000
-  }
+  mochaOpts: {
+  reporter: "spec",
+  timeout: 30000,
+  slow: 3000
+}
 };

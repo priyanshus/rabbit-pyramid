@@ -45,7 +45,7 @@ angular.module('myApp.mobileDetail', ['ui.router'])
     require: 'ngModel',
 
     link: function(scope, element, attr, ctrl) {
-      var avlblPinCodes = ['123','999','000'];
+      var avlblPinCodes = ['123','999','000','555'];
       ctrl.$validators.checkpincode = function(modelValue, viewValue) {
         var value = modelValue || viewValue;
         if(avlblPinCodes.indexOf(value) == -1) {

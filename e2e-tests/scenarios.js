@@ -1,42 +1,26 @@
 'use strict';
+'use strict';
 
-/* https://github.com/angular/protractor/blob/master/docs/toc.md */
+var chai = require('chai'),
+    chaiAsPromised = require('chai-as-promised'),
 
-describe('my app', function() {
+expect = chai.expect;
 
+chai.use(chaiAsPromised);
 
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
-    browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toMatch("/view1");
-  });
+describe('Rabbit Store', function() {
 
+  it('should allow user to buy mobile', function(done) {
+    browser.get('/app');
+    browser.sleep(500);
+    var buyButton = element.all(by.name('buy')).get(1);
+    buyButton.click();
+    var buyLink = element(by.name('buylink'));
+    buyLink.click();
 
-  describe('view1', function() {
-
-    beforeEach(function() {
-      browser.get('index.html#/view1');
-    });
-
-
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 1/);
-    });
-
-  });
-
-
-  describe('view2', function() {
-
-    beforeEach(function() {
-      browser.get('index.html#/view2');
-    });
-
-
-    it('should render view2 when user navigates to /view2', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 2/);
-    });
-
+    element(by.name('username')).sendKeys('admin');
+    element(by.name('password')).sendKeys('admin');
+    element(by.name('loginbutton')).click();
+    done();
   });
 });

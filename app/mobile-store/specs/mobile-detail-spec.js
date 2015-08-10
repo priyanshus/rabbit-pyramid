@@ -96,7 +96,7 @@ describe('On Mobile Detailed View Page', function() {
     $rootScope.$digest();
 
     var inputBox = element.find('input');
-    angular.element(inputBox).val('123009').trigger('input');
+    angular.element(inputBox).val('12399').trigger('input');
     scope.$apply();
 
     expect(inputBox).toHaveClass("ng-valid-checkpincode");

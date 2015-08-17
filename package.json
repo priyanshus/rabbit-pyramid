@@ -19,6 +19,7 @@
     "karma-spec-reporter": "latest",
     "protractor": "^2.1.0",
     "shelljs": "^0.2.6",
+    "supertest": "^1.0.1",
     "chai": "^1.9.2",
     "chai-as-promised": "^4.1.1",
     "chai-webdriver": "^0.9.4",
@@ -28,8 +29,9 @@
     "startapi": "json-server --watch mocker/db.json&",
     "start": "http-server -a localhost -p 8000 -c-1 & json-server --watch mocker/db.json",
 
-    "test": "karma start karma.conf.js",
+    "test": "karma start karma.conf.js --single-run & npm run integration-test & npm run protractor",
     "test-single-run": "karma start karma.conf.js  --single-run",
+    "integration-test": "mocha integration-tests/*.js",
 
     "protractor": "protractor e2e-tests/protractor.conf.js"
   }

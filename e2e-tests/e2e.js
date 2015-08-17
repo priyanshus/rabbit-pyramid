@@ -1,5 +1,4 @@
 'use strict';
-'use strict';
 
 var chai = require('chai'),
     chaiAsPromised = require('chai-as-promised'),
@@ -8,7 +7,7 @@ expect = chai.expect;
 
 chai.use(chaiAsPromised);
 
-describe('Rabbit Store', function() {
+describe('E2E-Rabbit Store', function() {
 
   it('should allow user to buy mobile', function(done) {
     browser.get('/app');

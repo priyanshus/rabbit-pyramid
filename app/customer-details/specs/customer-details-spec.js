@@ -2,7 +2,7 @@
 describe('Customer Login Module', function() {
   var scope, controller, LoginService, location;
 
-  beforeEach(function (){
+  beforeEach(function () {
 
   module('myApp.customerDetails');
 

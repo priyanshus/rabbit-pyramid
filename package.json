@@ -17,6 +17,7 @@
     "karma-jasmine-jquery": "^0.1.1",
     "karma-junit-reporter": "^0.2.2",
     "karma-spec-reporter": "latest",
+    "karma-notify-send-reporter": "latest",
     "protractor": "^2.1.0",
     "shelljs": "^0.2.6",
     "supertest": "^1.0.1",
@@ -30,7 +31,7 @@
     "start": "http-server -a localhost -p 8000 -c-1 & json-server --watch mocker/db.json",
 
     "test": "karma start karma.conf.js --single-run & npm run integration-test & npm run protractor",
-    "test-single-run": "karma start karma.conf.js  --single-run",
+    "karma": "karma start karma.conf.js",
     "integration-test": "mocha integration-tests/*.js",
 
     "protractor": "protractor e2e-tests/protractor.conf.js"

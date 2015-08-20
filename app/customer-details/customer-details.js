@@ -19,9 +19,12 @@ angular.module('myApp.customerDetails', ['ui.router'])
 })
 
 .controller('CustomerDetailsCtrl', function($scope, $location, LoginService) {
+  $scope.erorrMessage = "";
 
   $scope.doLogin = function() {
-    var isValidLogin = LoginService.validateLogin($scope.username, $scope.password);
+    var username = $scope.username;
+    var password = $scope.password;
+    var isValidLogin = LoginService.validateLogin(username, password);
     if(isValidLogin) {
       $location.path("/payment-gateway");
     }else {

@@ -18,7 +18,7 @@ You need git to clone the angular-seed repository. You can get git from
 We also use a number of node.js tools to initialize and test angular-seed. You must have node.js and
 its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
 
-### Clone angular-seed
+### Clone rabbit-pyramid
 
 Clone the repository using [git][git]:
 
@@ -51,3 +51,17 @@ npm start
 ```
 
 Now browse to the app at `http://localhost:8000/app/#/mobile-list`.
+
+### Run the Test
+To run the test one can use below command:
+
+```
+npm test
+```
+Above command runs all the three layers of test only once.
+
+During development of code,one can use below command to run the tests. 
+
+```
+npm run karma
+```
